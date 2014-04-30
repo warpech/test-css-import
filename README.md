@@ -1,4 +1,6 @@
-test-css-import
-===============
+Test CSS @import
+================
 
-This repo tests using CSS @import rule in HTML imports
+This repo tests using CSS `@import` rule in HTML Imports
+
+Live demo: http://warpech.github.io/test-css-import/
