@@ -1,0 +1,26 @@
+<!doctype html>
+  <html>
+<head>
+  <title>CSS import test</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
+  <link rel="import" href="imports/partial.html">
+</head>
+<body>
+
+<p>Following paragraphs should appear in two colors</p>
+
+<div id="container"></div>
+
+<script>
+  var link = document.querySelector('link[rel="import"]');
+  link.addEventListener("load", function() {
+    // Clone the <template> in the import.
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+
+    document.querySelector('#container').appendChild(clone);
+  });
+</script>
+
+</body>
+  </html>
